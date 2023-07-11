@@ -1,14 +1,29 @@
 body{
     background-color: rgba(0, 0, 0, 0.616);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+button{
+    margin-bottom: 20px;
+    padding: 0.5em;
+    border-radius: 20px;
+    border: none;
 }
 #card-div{
     width: 400px;
     height: 400px;
     margin: auto;
-    display: grid;
+    display: none;
     grid-template-columns: repeat(4, 1fr);
     gap: 1em;
 }
 .card{
-    background-color:white;
+    background-color:rgb(173, 173, 173);
+}
+#wins-losses{
+    display: none;
+    justify-content: center;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: auto;
 }
