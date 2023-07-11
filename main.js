@@ -18,6 +18,7 @@ const colors = ["red", "red", "blue", "blue", "green", "green", "yellow", "yello
 shuffleArray(colors)
 
 function newGame(){
+    shuffleArray(colors)
     winLoss.style.display = "flex"
     cardDiv.style.display = "grid"
     cards.forEach(card => {card.style.backgroundColor = "rgb(173, 173, 173)"})
@@ -78,6 +79,6 @@ function checkLoss(){
     if (tries === 0){
         loss ++
         alert("Loser!")
-        losses.innerHTML = `losses: ${loss}`
+        losses.innerHTML = `Losses: ${loss}`
     }
 }

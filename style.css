@@ -8,6 +8,8 @@ button{
     padding: 0.5em;
     border-radius: 20px;
     border: none;
+    background-color: green;
+    color: white;
 }
 #card-div{
     width: 400px;
