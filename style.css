@@ -1,0 +1,13 @@
+#card-div{
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+}
+.card{
+    color: brown;
+    border: solid;
+    cursor: pointer;
+}
