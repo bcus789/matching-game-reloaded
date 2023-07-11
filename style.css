@@ -1,13 +1,14 @@
+body{
+    background-color: rgba(0, 0, 0, 0.616);
+}
 #card-div{
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1em;
 }
 .card{
-    color: brown;
-    border: solid;
-    cursor: pointer;
+    background-color:white;
 }
