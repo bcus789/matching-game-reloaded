@@ -19,6 +19,9 @@ function newGame() {
     shuffleArray(colors)
     winLoss.style.display = "flex"
     cardDiv.style.display = "grid"
+    tries = 5
+    cardsArr = []
+    triesLeft.innerHTML = `Tries: ${tries}`
     cards.forEach(card => { cardsArr.push(card) })
     cards.forEach(card => { card.style.backgroundColor = "rgb(173, 173, 173)" })
 
