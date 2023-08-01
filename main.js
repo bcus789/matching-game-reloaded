@@ -17,10 +17,11 @@ const colors = ["red", "red", "blue", "blue", "green", "green", "yellow", "yello
 
 function newGame() {
     shuffleArray(colors)
+    tries = 5
+    matches = 0
+    cardsArr = []
     winLoss.style.display = "flex"
     cardDiv.style.display = "grid"
-    tries = 5
-    cardsArr = []
     triesLeft.innerHTML = `Tries: ${tries}`
     cards.forEach(card => { cardsArr.push(card) })
     cards.forEach(card => { card.style.backgroundColor = "rgb(173, 173, 173)" })
@@ -44,7 +45,9 @@ cards.forEach(card => {
                 const selectedCard = document.querySelectorAll(".selected-card")
                 selectedCard.forEach(selectedCard => { selectedCard.removeAttribute("class", "selected-card") })
                 matches++
-                checkWin()
+                setTimeout(() => {
+                    checkWin()
+                }, 300)
             } else {
                 tries--
                 triesLeft.innerHTML = `Tries: ${tries}`
@@ -54,7 +57,9 @@ cards.forEach(card => {
                     selectedCard.forEach(selectedCard => { selectedCard.style.backgroundColor = "rgb(173, 173, 173)" })
                 }, 1000)
                 cardFlipped = false
-                checkLoss()
+                setTimeout(() => {
+                    checkLoss()
+                }, 300)
             }
         }
     })
@@ -74,6 +79,7 @@ function checkWin() {
         alert("Winner")
         score++
         wins.innerHTML = `Wins: ${score}`
+        newGame()
     }
 }
 
@@ -82,5 +88,6 @@ function checkLoss() {
         loss++
         alert("Loser!")
         losses.innerHTML = `Losses: ${loss}`
+        newGame()
     }
 }
